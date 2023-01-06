@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    background-color: #e3f2fd;
+}
+
+/* piano box */
+.wrapper{
+    width: 780px;
+    border-radius: 20px;
+    padding: 35px 40px;
+    background-color: #141414;
+}
+
+.wrapper header{
+    color: #b2b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Volumen and checkbox column desgin */
+header .column{
+    display: flex;
+    align-items: center;
+}
+
+header .column span{
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem;
+}
+
+/* voluume design */
+.volume-slider input{
+    outline: none;
+    accent-color: #fff;
+}
+
+/* checkbox desgin */
+.keys-checkbox input{
+    width: 60px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    border-radius: 40px;
+    background: #4b4b4b;
+}
+
+/* checkbox desgin when is unchecked*/
+.keys-checkbox input::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 5px;
+    border-radius: inherit;
+    position: absolute;
+    background: #a2a2a2;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+/* checkbox desgin when is checked*/
+.keys-checkbox input:checked::before{
+    left: 35px;
+    background-color: #fff;
+}
+
+
+/* piano keys */
+.piano-keys{
+display: flex;
+margin-top: 40px;
+}
+
+.piano-keys .key{
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    color: #a2a2a2;
+    position: relative;
+    text-transform: uppercase;
+}
+
+/* hide the keys from the piano */
+.piano-keys .key.hide span{
+    display: none;
+}
+
+/* piano black keys */
+.piano-keys .black{
+    width: 44px;
+    height: 140px;
+    z-index: 2;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+}
+/* animation */
+.piano-keys .black.active{
+    box-shadow: inset -5px 5px 10px rgba(225, 225, 255, 0.1);
+    background: linear-gradient(to bottom,#000 0%, #434343 100%);
+}
+
+/* piano white keys */
+.piano-keys .white{
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: linear-gradient(#fff 96%, #eee 4%);
+}
+
+/* animation */
+.piano-keys .white.active{
+    box-shadow: inset -5px 5px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+
+/* label span design */
+.piano-keys span{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 1.13rem;
+    text-align: center;
+}
+

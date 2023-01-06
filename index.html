@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Piano</title>
+</head>
+<body>
+    <!-- Piano Box -->
+    <div class="wrapper">
+        <header>
+            <!-- Volumen Adjustment -->
+            <div class="column volume-slider">
+                <span>Volumen</span> <input type="range" min="0" max="1" value="0.5" step="any">
+            </div>
+            <!-- Show Keys button -->
+            <div class="column keys-checkbox">
+                <span>Show keys</span> <input type="checkbox" checked>
+            </div>
+        </header> 
+        <footer>
+            
+        </footer>   
+        <!-- keys -->
+        <url class="piano-keys">
+            <li class="key white" data-letter="a"><span>a</span></li>
+            <li class="key black" data-letter="w"><span>w</span></li>
+            <li class="key white" data-letter="s"><span>s</span></li>
+            <li class="key black" data-letter="e"><span>e</span></li>
+            <li class="key white" data-letter="d"><span>d</span></li>
+            <li class="key white" data-letter="f"><span>f</span></li>
+            <li class="key black" data-letter="t"><span>t</span></li>
+            <li class="key white" data-letter="g"><span>g</span></li>
+            <li class="key black" data-letter="y"><span>y</span></li>
+            <li class="key white" data-letter="h"><span>h</span></li>
+            <li class="key black" data-letter="u"><span>u</span></li>
+            <li class="key white" data-letter="j"><span>j</span></li>
+            <li class="key white" data-letter="k"><span>k</span></li>
+            <li class="key black" data-letter="o"><span>o</span></li>
+            <li class="key white" data-letter="l"><span>l</span></li>
+            <li class="key black" data-letter="p"><span>p</span></li>
+            <li class="key white" data-letter=";"><span>;</span></li>
+        </url>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
